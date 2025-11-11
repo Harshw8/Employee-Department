@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Department Create</title>
+    </head>
+    <body>
+        <h1>Department Create</h1>
+        <a href="{{ route('department_list') }}">
+            <-BACK 
+        </a>
+        <form action="{{ route('department_store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            @include('Backend.department_form_inputs')
+
+        </form>
+    </body>
+</html>
