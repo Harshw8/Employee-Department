@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\AnnouncementController;
 use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\CurrencyController;
 use App\Http\Controllers\Backend\EmployeeLetterController;
+use App\Http\Controllers\Backend\SubDepartmentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -85,3 +86,10 @@ Route::post('/employeeletter/store', [EmployeeLetterController::class, 'store'])
 Route::get('/employeeletter/remove/{id}', [EmployeeLetterController::class, 'delete'])->name('employeeletter_delete');
 Route::get('/employeeletter/edit/{id}', [EmployeeLetterController::class, 'edit'])->name('employeeletter_edit');
 Route::post('/employeeletter/update/{id}', [EmployeeLetterController::class, 'update'])->name('employeeletter_update');
+
+Route::get('/sub-department-list', [SubDepartmentController::class, 'index'])->name('subdepartment_list');
+Route::get('/sub-department/create', [SubDepartmentController::class, 'create'])->name('subdepartment_create');
+Route::post('/sub-department/store', [SubDepartmentController::class, 'store'])->name('subdepartment_store');
+Route::get('/sub-department/remove/{id}', [SubDepartmentController::class, 'delete'])->name('subdepartment_delete');
+Route::get('/sub-department/edit/{id}', [SubDepartmentController::class, 'edit'])->name('subdepartment_edit');
+Route::post('/sub-department/update/{id}', [SubDepartmentController::class, 'update'])->name('subdepartment_update');

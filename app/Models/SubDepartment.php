@@ -12,4 +12,9 @@ class SubDepartment extends Model
         'department_id',
         'name',
     ];
+
+    public function department()
+    {
+        return $this->hasOne(Department::class,'id','department_id');
+    }
 }
