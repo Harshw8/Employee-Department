@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->foreignId('department_id');
-            $table->foreignId('sub_department_id');
+            $table->foreignId('subdepartment_id');
             $table->double('salary' , 6,2);
+            $table->string('profile_image');
             $table->enum('gender' , ['male' , 'female']);
             $table->date('birth_date');
             $table->timestamps();

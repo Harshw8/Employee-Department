@@ -64,4 +64,19 @@ class SubDepartmentController extends Controller
         Session::flash('success', 'Sub Department updated successfully');
         return redirect()->route('subdepartment_list');
     }
+
+    public function fetchdropdownsubdepartment($department_id)
+    {
+        $subdepartments = SubDepartment::where('department_id', $department_id)->get();
+
+        $html = "";
+
+        foreach($subdepartments as $subdepartment){
+            $html .= "<option value=".$subdepartment->id.">".$subdepartment->name."</option>";
+        }
+
+        return response()->json([
+            'html' => $html
+        ]);
+    }
 }

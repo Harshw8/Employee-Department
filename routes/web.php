@@ -11,6 +11,10 @@ use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\CurrencyController;
 use App\Http\Controllers\Backend\EmployeeLetterController;
 use App\Http\Controllers\Backend\SubDepartmentController;
+use App\Http\Controllers\Backend\EmployeeController;
+use App\Http\Controllers\Backend\CountryController;
+use App\Http\Controllers\Backend\StateController;
+use App\Http\Controllers\Backend\CityController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -93,3 +97,32 @@ Route::post('/sub-department/store', [SubDepartmentController::class, 'store'])-
 Route::get('/sub-department/remove/{id}', [SubDepartmentController::class, 'delete'])->name('subdepartment_delete');
 Route::get('/sub-department/edit/{id}', [SubDepartmentController::class, 'edit'])->name('subdepartment_edit');
 Route::post('/sub-department/update/{id}', [SubDepartmentController::class, 'update'])->name('subdepartment_update');
+Route::get('/sub-department/fetchDropDownSubDepartment/{department_id}', [SubDepartmentController::class, 'fetchDropDownSubDepartment'])->name('subdepartment_fetchDropDownSubDepartment');
+
+Route::get('/employee-list', [EmployeeController::class, 'index'])->name('employee_list');
+Route::get('/employee-create', [EmployeeController::class, 'create'])->name('employee_create');
+Route::post('/employee-store', [EmployeeController::class, 'store'])->name('employee_store');
+Route::get('/employee/edit/{employee}', [EmployeeController::class, 'edit'])->name('employee_edit');
+Route::get('/employee/remove/{id}', [EmployeeController::class, 'delete'])->name('employee_delete');
+Route::post('/employee/update/{id}', [EmployeeController::class, 'update'])->name('employee_update');
+
+Route::get('/country-list', [CountryController::class, 'index'])->name('country_list');
+Route::get('/country-create', [CountryController::class, 'create'])->name('country_create');
+Route::post('/country-store', [CountryController::class, 'store'])->name('country_store');
+Route::get('/country/remove/{id}', [CountryController::class, 'delete'])->name('country_delete');
+Route::get('/country/edit/{id}', [CountryController::class, 'edit'])->name('country_edit');
+Route::post('/country/update/{id}', [CountryController::class, 'update'])->name('country_update');  
+
+Route::get('/state-list', [StateController::class, 'index'])->name('state_list');
+Route::get('/state-create', [StateController::class, 'create'])->name('state_create');
+Route::post('/state-store', [StateController::class, 'store'])->name('state_store');
+Route::get('/state/remove/{id}', [StateController::class, 'delete'])->name('state_delete');
+Route::get('/state/edit/{id}', [StateController::class, 'edit'])->name('state_edit');
+Route::post('/state/update/{id}', [StateController::class, 'update'])->name('state_update');
+Route::get('/state/fetchDropDownState/{country_id}', [StateController::class, 'fetchDropDownState'])->name('state_fetchDropDownState');
+
+Route::get('/city-list', [CityController::class, 'index'])->name('city_list');
+Route::get('/city-create', [CityController::class, 'create'])->name('city_create');
+Route::post('/city-store', [CityController::class, 'store'])->name('city_store');
+
+
