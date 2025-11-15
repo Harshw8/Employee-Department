@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Task Edit</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>Task Edit</h1>
         <a href="{{ route('task_list') }}">
             <-BACK 
@@ -12,5 +10,4 @@
             @include('Backend.task_form_input')
 
         </form>
-    </body>
-</html>
+@endsection

@@ -1,9 +1,7 @@
-<html>
-    <head>
-        <title>Department List</title>
-    </head>
-    <body>
-        <h1>Department List</h1>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
+<h1>Department List</h1>
         <a href="{{ route('department_create') }}">
             <button type="button">create</button>
         </a>
@@ -55,5 +53,4 @@
                 @endforeach
             </tbody>
         </table>
-    </body>
-</html>
+@endsection

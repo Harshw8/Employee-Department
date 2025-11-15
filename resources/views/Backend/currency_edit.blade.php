@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Edit Currency</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>Edit Currency</h1>
         <a href="{{ route('currency_list') }}">
             <button type="button">Back</button>
@@ -16,5 +14,4 @@
             @csrf
             @include('backend.currency_form_inputs')
         </form>
-    </body>
-</html>
+@endsection

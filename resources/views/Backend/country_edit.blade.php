@@ -1,9 +1,7 @@
-<html>
-    <head>
-        <title>Country Edit</title>
-    </head>
-    <body>
-        <h1>Country Edit</h1>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
+<h1>Country Edit</h1>
         <a href="{{ route('country_list') }}">
             <-BACK 
         </a>
@@ -13,5 +11,4 @@
             @include('Backend.country_form_inputs')
 
         </form>
-    </body>
-</html>
+@endsection

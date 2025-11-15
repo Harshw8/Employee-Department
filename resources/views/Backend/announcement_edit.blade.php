@@ -1,9 +1,7 @@
-<html>
-    <head>
-        <title>Announcement Edit</title>
-    </head>
-    <body>
-        <h1>Announcement Edit</h1>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
+<h1>Announcement Edit</h1>
         <a href="{{ route('announcement_list') }}">
             <-BACK 
         </a>
@@ -11,5 +9,4 @@
             @csrf     
             @include('Backend.announcement_form_inputs')
         </form>
-    </body>
-</html>
+@endsection

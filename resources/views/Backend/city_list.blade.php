@@ -1,9 +1,7 @@
-<html>
-    <head>
-        <title>City List</title>
-    </head>
-    <body>
-        <h1>City List</h1>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
+<h1>City List</h1>
         <a href="{{ route('city_create') }}">Create City</a>
         @if (Session::has('success'))
             <p>
@@ -61,5 +59,4 @@
                 @endforeach
             </tbody>
         </table>
-    </body>
-</html>
+@endsection 

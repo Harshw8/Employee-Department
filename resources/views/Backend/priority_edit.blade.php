@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Priority Edit</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>Priority Edit</h1>
         <a href="{{ route('priority_list') }}">
             <-BACK 
@@ -13,5 +11,4 @@
             @include('Backend.priority_form_inputs')
 
         </form>
-    </body>
-</html>
+@endsection

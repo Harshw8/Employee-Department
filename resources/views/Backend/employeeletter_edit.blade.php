@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Edit Employee Letter</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>Edit Employee Letter</h1>
         <a href="{{ route('employeeletter_list') }}">
             <-BACK 
@@ -16,6 +14,5 @@
             @csrf
             @include('backend.employeeletter_form_inputs')
         </form>
-    </body>
-</html>
+@endsection
     

@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Employee List</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>Employee List</h1>
         <a href="{{ route('employee_create') }}">Create Employee</a>
         @if (Session::has('success'))
@@ -81,5 +79,4 @@
                 @endforeach
             </tbody>
         </table>
-    </body>
-</html>
+    @endsection

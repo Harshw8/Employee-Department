@@ -1,9 +1,7 @@
-<html>
-    <head>
-        <title>Department Edit</title>
-    </head>
-    <body>
-        <h1>Department Edit</h1>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
+<h1>Department Edit</h1>
         <a href="{{ route('department_list') }}">
             <-BACK 
         </a>
@@ -12,5 +10,4 @@
             
             @include('Backend.department_form_inputs')
         </form>
-    </body>
-</html>
+@endsection

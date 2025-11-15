@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Employee Create</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>Employee Create</h1>
         <a href="{{ route('employee_list') }}">
             <- BACK
@@ -63,5 +61,4 @@
             
         </script>
         <script src="{{ asset('assets/js/subdepartment.js') }}"></script>
-    </body>
-</html>  
+@endsection

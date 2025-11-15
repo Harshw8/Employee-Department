@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Project List</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>Project List</h1>
         <a href="{{ route('project_create') }}">
             <button type="button">create</button>
@@ -67,5 +65,4 @@
                 @endforeach
             </tbody>
         </table>
-    </body>
-</html>
+@endsection

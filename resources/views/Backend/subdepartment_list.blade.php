@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>SubDepartment List</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>SubDepartment List</h1>
         <a href="{{ route('subdepartment_create') }}">Create SubDepartment</a>
         @if (Session::has('success'))
@@ -57,5 +55,4 @@
                 @endforeach
             </tbody>
         </table>
-    </body>
-</html> 
+@endsection

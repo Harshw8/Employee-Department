@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Role Edit</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>Role Edit</h1>
         <a href="{{ route('role_list') }}">
             <-BACK 
@@ -12,5 +10,4 @@
             @include('Backend.role_form_inputs')
 
         </form>
-    </body>
-</html>
+@endsection

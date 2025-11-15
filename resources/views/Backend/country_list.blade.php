@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Country List</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>Country List</h1>
         <a href="{{ route('country_create') }}">
             <button type="button">create</button>
@@ -55,5 +53,4 @@
                 @endforeach
             </tbody>
         </table>
-    </body>
-</html> 
+@endsection 

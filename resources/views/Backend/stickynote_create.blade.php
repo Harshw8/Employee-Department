@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Sticky Note Create</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>Sticky Note Create</h1>
         <a href="{{ route('stickynote_list') }}">
             <-BACK 
@@ -12,5 +10,4 @@
             @include('Backend.stickynote_form_input')
 
         </form>
-    </body>
-</html>
+@endsection

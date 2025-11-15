@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Leave Create</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>Leave Create</h1>
         <a href="{{ route('leave_list') }}">
             <-BACK 
@@ -12,5 +10,4 @@
             
             @include('Backend.leave_form_inputs')
         </form>
-    </body>
-</html>
+@endsection

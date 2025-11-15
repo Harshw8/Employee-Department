@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Task Create</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>Task Create</h1>
         <a href="{{ route('task_list') }}">
             <-BACK 
@@ -11,5 +9,4 @@
             @csrf
             @include('Backend.task_form_input')
         </form>
-    </body>
-</html>
+@endsection

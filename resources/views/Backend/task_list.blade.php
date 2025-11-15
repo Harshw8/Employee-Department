@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Task List</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>Task List</h1>
         <a href="{{ route('task_create') }}">
             <button type="button">create</button>
@@ -59,5 +57,4 @@
                 @endforeach
             </tbody>
         </table>
-    </body>
-</html> 
+@endsection

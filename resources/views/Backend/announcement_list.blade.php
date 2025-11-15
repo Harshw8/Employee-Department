@@ -1,9 +1,7 @@
-<html>
-    <head>
-        <title>Announcement List</title>
-    </head>
-    <body>
-        <h1>Announcement List</h1>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
+<h1>Announcement List</h1>
         <a href="{{ route('announcement_create') }}">
             <button type="button">create</button>
         </a>
@@ -63,5 +61,4 @@
                 @endforeach
             </tbody>
         </table>
-    </body>
-</html>
+@endsection

@@ -1,9 +1,7 @@
-<html>
-    <head>
-        <title>City Create</title>
-    </head>
-    <body>
-        <h1>City Create</h1>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
+<h1>City Create</h1>
         <a href="{{ route('city_list') }}">
             <- BACK
         </a>
@@ -53,5 +51,4 @@
                 });
             }); 
         </script>
-    </body>
-</html>  
+@endsection

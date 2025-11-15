@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>State Edit</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>State Edit</h1>
         <a href="{{ route('state_list') }}">
             <- BACK
@@ -11,6 +9,4 @@
             @csrf
             @include('backend.state_form_inputs')
         </form>
-        
-    </body>
-</html> 
+@endsection

@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>State List</title>
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>State List</h1>
         <a href="{{ route('state_create') }}">Create State</a>
         @if (Session::has('success'))
@@ -57,5 +55,4 @@
                 @endforeach
             </tbody>
         </table>
-    </body>
-</html> 
+@endsection

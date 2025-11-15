@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Currency Create</title>  
-    </head>
-    <body>
+@extends('backend.layout.master_layout')
+
+@section('main_content')
         <h1>Currency Create</h1>
         <a href="{{ route('currency_list') }}">
             <-BACK 
@@ -12,5 +10,4 @@
             @include('Backend.currency_form_inputs')
 
         </form>
-    </body>
-</html>
+@endsection
