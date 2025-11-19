@@ -2,13 +2,16 @@
 
 @section('main_content')
         <h1>Leave Edit</h1>
-        <a href="{{ route('leave_list') }}">
-            <-BACK 
-        </a>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
         <form action="{{ route('leave_update',['id'=>$leave->id]) }}" method="POST" enctype="multipart/form-data">
             @csrf
             
             @include('Backend.leave_form_inputs')
 
         </form>
+        </div>
+        </div>
+        </div>
 @endsection

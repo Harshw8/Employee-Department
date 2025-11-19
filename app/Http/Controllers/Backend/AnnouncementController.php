@@ -28,7 +28,7 @@ class AnnouncementController extends Controller
             'description' => $request->description,
             'announcement_by' => $request->announcement_by,
         ]);
-        return redirect()->route('announcement_list');
+        return redirect()->route('announcement_list')->with('success', 'Announcement created successfully');
     }
 
     public function delete($id)

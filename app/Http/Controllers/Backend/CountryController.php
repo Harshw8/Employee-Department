@@ -25,7 +25,7 @@ class CountryController extends Controller
         Country::create([
             'name' => $request->name,
         ]);
-        return redirect()->route('country_list');
+        return redirect()->route('country_list')->with('success', 'Country created successfully');
     }
 
     public function delete($id)

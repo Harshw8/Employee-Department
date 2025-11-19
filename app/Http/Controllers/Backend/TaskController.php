@@ -26,7 +26,7 @@ class TaskController extends Controller
             'task_title' => $request->task_title,
             'task_description' => $request->task_description,
         ]);
-        return redirect()->route('task_list');
+        return redirect()->route('task_list')->with('success', 'Task created successfully');
     }
 
     public function delete($id)

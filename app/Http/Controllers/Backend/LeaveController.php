@@ -25,7 +25,7 @@ class LeaveController extends Controller
         Leave::create([
             'leave_name' => $request->leave_name,
         ]);
-        return redirect()->route('leave_list');
+        return redirect()->route('leave_list')->with('success', 'Leave created successfully');
     }
 
     public function delete($id)

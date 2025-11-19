@@ -1,6 +1,7 @@
-<div>
-    <label for="country_id">Country</label>
-    <select name="country_id">
+<div class="col-md-6">
+    <div class="row mb-2">
+    <label for="country_id"class="form-label">Country</label>
+    <select name="country_id" class="country_class form-select">
         @foreach($countries as $country)
             @if ($state?->country_id == $country->id)
                 <option value="{{ $country->id }}" selected> {{ $country->name }} </option>
@@ -10,12 +11,15 @@
         @endforeach
 
     </select>
+    </div>
 </div>
-<div>
-    <label for="name">Name</label>
-    <input type="text" name="name" placeholder="Name" required value="{{ $state?->name }}">
+<div class="col-md-6">
+    <div class="row mb-2">
+    <label for="name"class="form-label">Name</label>
+    <input type="text" class="form-control" name="name" placeholder="Name" required value="{{ $state?->name }}">
+    </div>
 </div>
 
-<div>
-    <button type="submit">SAVE</button>
+<div class="col-md-2">
+    <button type="submit" class="btn btn-grd-primary px-4">SAVE</button>
 </div>

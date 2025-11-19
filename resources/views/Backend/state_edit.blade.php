@@ -2,11 +2,14 @@
 
 @section('main_content')
         <h1>State Edit</h1>
-        <a href="{{ route('state_list') }}">
-            <- BACK
-        </a>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
         <form action="{{ route('state_update', $state->id) }}" method="post" enctype="multipart/form-data">
             @csrf
             @include('backend.state_form_inputs')
         </form>
+        </div>
+        </div>
+        </div>
 @endsection

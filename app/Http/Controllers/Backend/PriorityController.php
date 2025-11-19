@@ -26,7 +26,7 @@ class PriorityController extends Controller
         Priority::create([
             'priority_name' => $request->priority_name,
         ]);
-        return redirect()->route('priority_list');
+        return redirect()->route('priority_list')->with('success', 'Priority created successfully');
     }
 
     public function delete($id)

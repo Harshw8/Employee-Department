@@ -2,9 +2,8 @@
 
 @section('main_content')
         <h1>Edit Currency</h1>
-        <a href="{{ route('currency_list') }}">
-            <button type="button">Back</button>
-        </a>
+        <div class="card">
+            <div class="card-body">
         @if(session()->has('success'))
             <p>
                 {{ session()->get('success') }}
@@ -14,4 +13,6 @@
             @csrf
             @include('backend.currency_form_inputs')
         </form>
-@endsection
+    </div>
+    </div>
+    @endsection

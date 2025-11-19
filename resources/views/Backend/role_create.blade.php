@@ -2,12 +2,15 @@
 
 @section('main_content')
         <h1>Role Create</h1>
-        <a href="{{ route('role_list') }}">
-            <-BACK 
-        </a>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
         <form action="{{ route('role_store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             @include('Backend.role_form_inputs')
 
         </form>
+        </div>
+        </div>
+        </div>
 @endsection

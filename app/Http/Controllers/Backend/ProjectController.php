@@ -28,7 +28,7 @@ class ProjectController extends Controller
             'client_name' => $request->client_name,
             'client_email' => $request->client_email,
         ]);
-        return redirect()->route('project_list');
+        return redirect()->route('project_list')->with('success', 'Project created successfully');
     }
 
     public function delete($id)

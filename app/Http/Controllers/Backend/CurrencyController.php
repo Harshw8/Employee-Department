@@ -27,7 +27,7 @@ class CurrencyController extends Controller
             'currency_name' => $request->currency_name,
             'currency_symbol' => $request->currency_symbol,
         ]);
-        return redirect()->route('currency_list');
+        return redirect()->route('currency_list')->with('success', 'Currency created successfully');
     }
 
     public function delete($id)

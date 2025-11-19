@@ -16,25 +16,52 @@ class CityController extends Controller
         $cities = City::all();
         return view('backend.city_list', compact('cities'));
     }
-
     public function create()
     {
         $countries = Country::all();
         $states = State::all();
-
         return view('backend.city_create', compact('countries', 'states'));
     }
 
     public function store(Request $request)
     {
-        $data = [
+        City::create([
             'name' => $request->name,
             'country_id' => $request->country_id,
             'state_id' => $request->state_id,
-        ];
-
-        City::create($data);
-
+        ]);
         return redirect()->route('city_list')->with('success', 'City created successfully');
+    }
+
+    public function delete($id)
+    {
+        $city = City::where('id', $id)->first();
+
+        if($city)
+        {
+            $city->delete();
+            session()->flash('success', 'City deleted successfully');
+            return redirect()->route('city_list');
+        }
+    }
+
+    public function edit($id)
+    {
+        $city = City::find($id);
+        $countries = Country::all();
+        $states = State::all();
+        return view('backend.city_edit', compact('city', 'countries', 'states'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $city = City::find($id);
+        $city->name = $request->name;
+        $city->country_id = $request->country_id;
+        $city->state_id = $request->state_id;
+        $city->save();
+
+        session()->flash('success', 'City updated successfully');
+        return redirect()->route('city_list');
     }
 }

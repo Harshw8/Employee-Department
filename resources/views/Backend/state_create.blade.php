@@ -2,11 +2,14 @@
 
 @section('main_content')
         <h1>State Create</h1>
-        <a href="{{ route('state_list') }}">
-            <- BACK
-        </a>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
         <form action="{{ route('state_store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             @include('backend.state_form_inputs')
         </form>
+        </div>
+        </div>
+        </div>
 @endsection

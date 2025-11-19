@@ -26,7 +26,7 @@ class EmployeeLetterController extends Controller
             'title' => $request->title,
             'description' => $request->description,
         ]);
-        return redirect()->route('employeeletter_list');
+        return redirect()->route('employeeletter_list')->with('success', 'Employee letter created successfully');
     }
 
     public function delete($id)

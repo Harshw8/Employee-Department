@@ -27,7 +27,7 @@ class StickyNoteController extends Controller
             'title' => $request->title,
             'description' => $request->description,
         ]);
-        return redirect()->route('stickynote_list');
+        return redirect()->route('stickynote_list')->with('success', 'Sticky Note created successfully');
     }
 
     public function delete($id)

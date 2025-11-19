@@ -25,7 +25,7 @@ class RoleController extends Controller
         Role::create([
             'Role_name' => $request->Role_name,
         ]);
-        return redirect()->route('role_list');
+        return redirect()->route('role_list')->with('success', 'Role created successfully');
     }
 
     public function delete($id)

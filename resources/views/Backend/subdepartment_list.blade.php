@@ -1,14 +1,26 @@
 @extends('backend.layout.master_layout')
 
 @section('main_content')
-        <h1>SubDepartment List</h1>
-        <a href="{{ route('subdepartment_create') }}">Create SubDepartment</a>
+        <h1>SubDepartment List</h1> 
         @if (Session::has('success'))
-            <p>
-                {{ Session::get('success') }}
-            </p>
+            <div class="alert alert-success border-0 bg-grd-success alert-dismissible fade show">
+				<div class="d-flex align-items-center">
+					<div class="font-35 text-white"><span class="material-icons-outlined fs-2">check_circle</span>
+					</div>
+					<div class="ms-3">
+						<h6 class="mb-0 text-white">Success Alerts</h6>
+						<div class="text-white">{{ session()->get('success') }}</div>
+						</div>
+					</div>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
         @endif
-        <table border="1">
+        <div class="card">
+            <div class="card-header">
+                <a href="{{ route('subdepartment_create') }}" class="btn ripple btn-primary px-5">create</a>
+            </div>
+            <div class="card-body">
+        <table class="table table-bordered mb-0">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -43,11 +55,13 @@
                         {{ $subdepartment->updated_at }}
                     </td>
                     <td>
-                        <a href="{{ route('subdepartment_delete', $subdepartment->id) }}">
+                        <a class="btn ripple btn-danger px-5"
+                        href="{{ route('subdepartment_delete', $subdepartment->id) }}">
                             DELETE
-                        </a> <br/>
+                        </a> 
 
-                        <a href="{{ route('subdepartment_edit', $subdepartment->id) }}">
+                        <a class="btn ripple btn-primary px-5"
+                        href="{{ route('subdepartment_edit', $subdepartment->id) }}">
                             EDIT
                         </a>
                     </td>
@@ -55,4 +69,6 @@
                 @endforeach
             </tbody>
         </table>
+    </div>
+</div>
 @endsection

@@ -1,8 +1,11 @@
-<div>
-                <label for="leave_name">Leave Name</label>
-                <input type="text" name="leave_name" id="leave_name" value="{{ $leave?->leave_name }}">
+<div class="col-md-4">
+    <div class="row mb-2">
+                <label for="leave_name" class="form-label">Leave Name</label>
+                <input type="text" class="form-control" name="leave_name" id="leave_name" value="{{ $leave?->leave_name }}">
             </div>
+        </div>
+            
 
-            <div>
-                <button type="submit">SAVE</button>
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-grd-primary px-4">SAVE</button>
             </div>

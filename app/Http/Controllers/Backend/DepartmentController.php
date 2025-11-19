@@ -25,7 +25,7 @@ class DepartmentController extends Controller
         Department::create([
             'name' => $request->name,
         ]);
-        return redirect()->route('department_list');
+        return redirect()->route('department_list')->with('success', 'Department created successfully');
     }
 
     public function delete($id)

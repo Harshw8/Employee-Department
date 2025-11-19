@@ -21,6 +21,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/about-us', function () {
+    return view('about_us');
+});
+
+Route::get('/template', function () {
+    return view('template');
+});
+
 Route::get('/department-list', [DepartmentController::class, 'index'])->name('department_list');
 Route::get('/department/create', [DepartmentController::class, 'create'])->name('department_create');
 Route::post('/department/store', [DepartmentController::class, 'store'])->name('department_store');
@@ -124,5 +136,9 @@ Route::get('/state/fetchDropDownState/{country_id}', [StateController::class, 'f
 Route::get('/city-list', [CityController::class, 'index'])->name('city_list');
 Route::get('/city-create', [CityController::class, 'create'])->name('city_create');
 Route::post('/city-store', [CityController::class, 'store'])->name('city_store');
+Route::get('/city/remove/{id}', [CityController::class, 'delete'])->name('city_delete');
+Route::get('/city/edit/{id}', [CityController::class, 'edit'])->name('city_edit');
+Route::post('/city/update/{id}', [CityController::class, 'update'])->name('city_update');
+
 
 
